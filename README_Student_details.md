@@ -57,4 +57,10 @@ It also includes a **CAPTCHA** to ensure that the form is submitted by a human.
 
 ## Notes
 - Make sure the file is named `index.html` to open directly in a browser.  
-- CAPTCHA is case-sensitive and must be entered correctly to match.  
+- CAPTCHA is case-sensitive and must be entered correctly to match.
+
+  <img width="1920" height="1080" alt="Screenshot (125)" src="https://github.com/user-attachments/assets/69d77b6e-e162-409e-ad6f-4ba6881ace70" />
+  <img width="1920" height="1080" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/b058e6d5-71e9-4098-81a8-f045e323b2b0" />
+
+  
+
