@@ -1,86 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>hema</title>
-<style>
-.captcha-box{
-font-size:22px;
-font-weight:bold;
-background-color:pink;
-width:120px;
-text-align:center;
-padding:10px;
-letter-spacing:5px;
-user-select:none;
-}
-</style>
+    <title>Student Registration Form</title>
 </head>
-<body onload="generateCaptcha()">
-<h1><center><u><b><i>Students Registration Form</i></b></u></center></h1>
-<form>
-<label>Name:</label>
-<input type="text" name="name" placeholder="Enter your name" required><br><br><br>
-<label>Age:</label>
-<input type="number" name="age" required<br><br><br>
-<label>phone number:</label>
-<input type="tel" name="phn" maxlength="10" required><br><br><br>
+<body>
 
-<label>depart:</label>
-<select name="department">
-<option value="">--select class--</option>
-<option>ECE</option>
-<option>CSE</option>
-<option>EEE</option>
-<option>MECH</option>
-<option>CIVIL</option>
-</select>
-<br><br><br>
-<label>Gender:</label>
-<input type="radio"  value="male" name="gender" >male
-<input type="radio" name="gender" value="female">female
-<input type="radio" name="gender" value="other">other
-<br><br><br>
+<h2>Students Registration Form</h2>
 
-<label>select subject</label>
-<input type="checkbox"  value="maths" name="subjects[]" >maths
-<input type="checkbox"  value="science" name="subjects[]" >science
-<input type="checkbox"  value="social" name="subjects[]" >social
-<br><br><br>
-<input type="checkbox">I agree<br><br>
-<h2>CAPTCHA</h2>
-<script>
-let captcha="";
-function generateCaptcha(){
-captcha=Math.random().toString(36).substring(2,8);
-document.getElementById("captcha").innerText=captcha;
-}
-function validateCaptcha(){
-let userInput=document.getElementById("captchaInput").value;
-if (userInput===captcha){
-alert("captcha matched");
-}
-else{
-alert("captcha not matched");
-generateCaptcha();
-}
-}
+<form action="https://formspree.io/f/mgoekvrn" method="POST">
 
-</script>
-<div id="captcha" class="captcha-box"></div>
-<br>
-<input type="text" id="captchaInput" placeholder="enter captcha">
-<br><br>
-<button  type="button" onclick="validateCaptcha()">Submit</button>
-<button type="button" onclick="generateCaptcha()">Refresh CAPTCHA</button>
+    <!-- Name -->
+    <label>Name:</label><br>
+    <input type="text" name="name" placeholder="Enter your name" required>
+    <br><br>
 
-<br><br><br>
+    <!-- Age -->
+    <label>Age:</label><br>
+    <input type="number" name="age" required>
+    <br><br>
 
-<input type="submit" value="Submit">
+    <!-- Phone Number -->
+    <label>Phone Number:</label><br>
+    <input type="tel" name="phone" required>
+    <br><br>
 
+    <!-- Department -->
+    <label>Department:</label><br>
+    <select name="department" required>
+        <option value="">--Select Class--</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="MECH">MECH</option>
+    </select>
+    <br><br>
 
+    <!-- Gender -->
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="Male" required> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <br><br>
 
+    <!-- Subjects -->
+    <label>Select Subject:</label><br>
+    <input type="checkbox" name="subject" value="Maths"> Maths
+    <input type="checkbox" name="subject" value="Science"> Science
+    <input type="checkbox" name="subject" value="Social"> Social
+    <br><br>
 
+    <!-- Agreement -->
+    <input type="checkbox" name="agree" required> I agree
+    <br><br>
+
+    <!-- Submit -->
+    <button type="submit">Submit</button>
 
 </form>
+
 </body>
 </html>
